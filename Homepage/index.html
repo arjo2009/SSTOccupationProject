@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "icon" href =  
+"https://www.flaticon.com/svg/static/icons/svg/3281/3281289.svg" 
+        type = "image/x-icon">
+        <title>RURAL AND URBAN OCCUPATION</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar-inverse" style="position:sticky;top:0;z-index:99">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a href="#" class="navbar-brand">RURAL AND URBAN OCCUPATION</a>
+        <a href="https://arjo2009.github.io/SSTOccupationPtoject/Rural%20Administration%20Videos/index.html" class="navbar-brand">Rural Occupation Videos</a>
+        <a href="https://arjo2009.github.io/SSTOccupationPtoject/Urban%20Administration%20Videos/index.html" class="navbar-brand">Urban Occupation Videos</a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="https://arjo2009.github.io/SSTOccupationPtoject/Creators/index.html" class="navbar-brand" id="ngli">Creators</a></li>
+      </ul>
+    </div>
+
+</nav>
+        <div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+            <h2 style="font-size: 45px;color: white;">Rural Administration</h2>
+			<h4 style="color: white">scroll down</h4>
+          </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 style="font-size: 45px;">Urban Administration</h2>
+			<h4 style="color: black">scroll down</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading" style="color: white;">OCCUPATION</h1>
+          <h2 class="skw-page__heading_small" style="color: white;">A job, employment, work or occupation, is a person's role in society. More specifically, a job is an activity, often regular and often performed in exchange for payment. Many people have multiple jobs. A person can begin a job by becoming an employee, volunteering, starting a business, or becoming a parent.</h2>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-3">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading" style="color: white;">Rural Occupation</h1>
+          <h2 class="skw-page__heading_small" style="color: white;">People in rural areas earn their living in various ways. About 60% of our country’s population is directly engaged in agriculture.Many labourers and small farmers depend upon collection from the forest, animal husbandry, dairy produce, fishing and other tasks to earn additional income. Along the coastal areas, fishing is extensively carried out.People in rural areas are unable to find enough work to keep them employed throughout the year. </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-4">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading" style="color: white;">Urban Occupation</h1>
+          <h2 class="skw-page__heading_small" style="color: white;">A laborer is a person who works in manual labor types, especially in the construction and factory industries' workforce. Laborers are in a class of wage-earners,in simple words a person doing unskilled manual work for wages is known as a labourer.A majority of urban livelihoods in India fall under this category of workers. Doctor, Civil Engineer, Plumber, Electrician, Fireman, Mason, Police are some other important community jobs.</h2>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+        <script>
+            $(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+
+});
+        </script>
+    </body>
+</html>
